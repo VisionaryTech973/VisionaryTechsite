@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataXtrak par VisionaryTech | L'IA d'extraction documentaire</title>
+    <meta name="description" content="DataXtrak est le logiciel desktop d'extraction documentaire de VisionaryTech. Importez, extrayez, et archivez automatiquement vos données métiers grâce à l'IA.">
+    
+    <!-- Open Graph / Réseaux sociaux -->
+    <meta property="og:title" content="DataXtrak | L'extraction documentaire par VisionaryTech">
+    <meta property="og:description" content="Extraction intelligente de documents alimentée par l'intelligence artificielle pour les professionnels.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://visionary-tech.fr">
+    <meta property="og:image" content="https://visionary-tech.fr/assets/dataxtrak_app_mockup_1776325610851.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.ico?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png?v=2">
+    <link rel="icon" type="image/png" href="./assets/favicon-snake-cropped.png?v=2">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Analytics (Simulation) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <a href="#" class="brand">
+                <img src="./assets/logo-visionarytech.png" alt="Logo VisionaryTech" data-i18n-alt="alt_visionary_logo" class="brand-logo">
+                <span class="brand-vt">Visionary<span class="text-gradient">Tech</span></span>
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="aria_open_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="#what-is" class="nav-link" data-i18n="nav_product">Produit</a>
+                <a href="#pricing" class="nav-link" data-i18n="nav_pricing">Tarifs</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+                <div class="lang-switch">
+                    <button class="lang-btn active" aria-label="Passer en Français" data-i18n-aria-label="aria_switch_fr" data-lang="fr">FR</button>
+                    <button class="lang-btn" aria-label="Passer en Anglais" data-i18n-aria-label="aria_switch_en" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-logo-wrapper">
+                    <img src="./assets/dataxtrak-logo.png" alt="DataXtrak Logo" data-i18n-alt="alt_dataxtrak_logo" class="hero-product-logo">
+                </div>
+                <h1 class="hero-title"><span data-i18n="hero_title">L'extraction documentaire <br/></span><span class="text-gradient word-rotator" data-words="intelligente,automatisée" data-i18n-rotator="hero_rotator">intelligente</span> <span class="text-gradient" data-i18n="hero_title_ai">par IA.</span></h1>
+                <p class="hero-description" data-i18n="hero_desc">Importez en masse, laissez l'IA lire et extraire vos informations clés, et retrouvez tout dans une base de données structurée. Zéro saisie manuelle.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-large" data-i18n="hero_btn_demo">Demander une démo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Banner -->
+    <div class="stats-banner-container">
+        <div class="container">
+            <div class="hero-stats reveal-up">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-prefix="+">+100</span>
+                    <span class="stat-label" data-i18n="stat_docs">docs simultanés</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">Multi</span>
+                    <span class="stat-label" data-i18n="stat_sectors">Secteurs métiers</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="0">0</span>
+                    <span class="stat-label" data-i18n="stat_manual">saisie manuelle</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">Win & Mac</span>
+                    <span class="stat-label" data-i18n="stat_compat">compatibilité</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section id="what-is" class="section">
+        <div class="container">
+            <div class="product-showcase-wrapper">
+                <div class="product-showcase-grid">
+
+                <div class="product-carousel-block glass-panel reveal-left">
+
+                    <h2 class="product-block-title" data-i18n="prod_m1_title">Creer et extraire</h2>
+                    <div class="product-carousel" data-autoplay-delay="2400">
+                        <article class="product-slide is-active">
+                            <img src="./assets/capture_creation.png" alt="Interface Création DataXtrak">
+                        </article>
+                        <article class="product-slide">
+                            <img src="./assets/capture_1.png" alt="Choix entre import et extraction" data-i18n-alt="alt_product_m1_s1">
+                            <div class="product-slide-caption">
+                                <h3 data-i18n="prod_m1_s1_title">Import ou extraction — vous choisissez</h3>
+                                <p data-i18n="prod_m1_s1_desc">Importez un tableur existant ou lancez une extraction documentaire intelligente.</p>
+                            </div>
+                        </article>
+                        <article class="product-slide">
+                            <img src="./assets/capture_2.png" alt="Assistant d'importation" data-i18n-alt="alt_product_m1_s2">
+                            <div class="product-slide-caption">
+                                <h3 data-i18n="prod_m1_s2_title">Vous avez choisi l'import ?</h3>
+                                <p data-i18n="prod_m1_s2_desc">Un assistant intuitif en 5 étapes vous guide pour importer votre tableur sans effort.</p>
+                            </div>
+                        </article>
+                        <article class="product-slide">
+                            <img src="./assets/capture_3.png" alt="Interface d'extraction" data-i18n-alt="alt_product_m1_s3">
+                            <div class="product-slide-caption">
+                                <h3 data-i18n="prod_m1_s3_title">Vous avez choisi l'extraction ?</h3>
+                                <p data-i18n="prod_m1_s3_desc">Déposez vos documents l'IA analyse, extrait les informations clés et génère automatiquement votre base de données. Sans configuration, sans saisie.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="product-carousel-dots" aria-hidden="true"></div>
+                </div>
+
+                <div class="product-carousel-block glass-panel reveal-right">
+
+                    <h2 class="product-block-title" data-i18n="prod_m2_title">Centraliser et exploiter</h2>
+                    <div class="product-carousel" data-autoplay-delay="2400">
+                        <article class="product-slide is-active">
+                            <img src="./assets/capture_consultation.png" alt="Interface Consultation DataXtrak">
+                        </article>
+                        <article class="product-slide">
+                            <img src="./assets/capture_m2_2.png" alt="Liste des bases de donnees centralisees" data-i18n-alt="alt_product_m2_s1">
+                            <div class="product-slide-caption">
+                                <h3 data-i18n="prod_m2_s1_title">Toutes vos bases centralisees et exportables</h3>
+                                <p data-i18n="prod_m2_s1_desc">Retrouvez instantanement n'importe quelle base classee par categorie. Exportez en Excel ou PDF en un clic.</p>
+                            </div>
+                        </article>
+                        <article class="product-slide">
+                            <img src="./assets/capture_m2_1.png" alt="Fiches structurees et editables" data-i18n-alt="alt_product_m2_s2">
+                            <div class="product-slide-caption">
+                                <h3 data-i18n="prod_m2_s2_title">Des fiches structurees et editables</h3>
+                                <p data-i18n="prod_m2_s2_desc">Chaque document devient une fiche consultable, modifiable et exportable en PDF en un clic.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="product-carousel-dots" aria-hidden="true"></div>
+                </div>
+                </div>
+                
+                <div class="text-center section-header product-header product-overlay">
+                    <div class="product-overlay-quote-wrapper">
+                        <span class="quote-icon quote-left">“</span>
+                        <p class="section-desc product-overlay-desc mt-4" data-i18n="prod_intro_desc">
+                            <strong style="color: var(--text-primary);">Data<span class="text-gradient">Xtrak</span></strong> est un extracteur documentaire universel. Chargez vos documents et laissez l'IA faire le reste. Sans configuration, le logiciel détecte les informations clés, les extrait et les archive dans un tableur structuré.
+                        </p>
+                        <span class="quote-icon quote-right">”</span>
+                    </div>
+                    <hr class="overlay-separator" />
+                    <div class="explore-indicator mt-8">
+                        <div class="pulse-ring"></div>
+                        <span class="text-sm text-dim" data-i18n="prod_explore">Survolez pour explorer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section id="how-it-works" class="section section-darker">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title"><span data-i18n="wf_title">Un workflow </span><span class="text-gradient" data-i18n="wf_title_hl">fluide.</span></h2>
+                <p class="section-desc" data-i18n="wf_desc">Passez du chaos documentaire à des bases de données structurées. Sans instruction, l'IA comprend votre métier et en extrait l'essentiel.</p>
+            </div>
+            
+            <div class="workflow-grid">
+                <!-- Drop 1 -->
+                <div class="workflow-card glass-panel reveal-up" style="transition-delay: 0.1s">
+                    <div class="workflow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    </div>
+                    <div class="step-number">01</div>
+                    <h3 class="step-title" data-i18n="wf_s1_title">Import</h3>
+                    <p class="step-desc" data-i18n="wf_s1_desc">Glissez vos documents PDF, textes et images, ou importez directement un tableur existant.</p>
+                </div>
+                <!-- Drop 2 -->
+                <div class="workflow-card glass-panel reveal-up" style="transition-delay: 0.2s">
+                    <div class="workflow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+                    </div>
+                    <div class="step-number">02</div>
+                    <h3 class="step-title" data-i18n="wf_s2_title">Lecture intelligente</h3>
+                    <p class="step-desc" data-i18n="wf_s2_desc">Documents ou tableurs : l'IA lit, comprend, et extrait l'essentiel.</p>
+                </div>
+                <!-- Drop 3 -->
+                <div class="workflow-card glass-panel reveal-up" style="transition-delay: 0.3s">
+                    <div class="workflow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>
+                    </div>
+                    <div class="step-number">03</div>
+                    <h3 class="step-title" data-i18n="wf_s3_title">Base structurée</h3>
+                    <p class="step-desc" data-i18n="wf_s3_desc">Le logiciel construit pour vous une base de données propre et organisée, à partir des informations extraites.</p>
+                </div>
+                <!-- Drop 4 -->
+                <div class="workflow-card glass-panel reveal-up" style="transition-delay: 0.4s">
+                    <div class="workflow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                    </div>
+                    <div class="step-number">04</div>
+                    <h3 class="step-title" data-i18n="wf_s4_title">Consultation & Fiches</h3>
+                    <p class="step-desc" data-i18n="wf_s4_desc">Consultez chaque élément de votre base créée sous forme de fiche claire et détaillée.</p>
+                </div>
+                <!-- Drop 5 -->
+                <div class="workflow-card glass-panel reveal-up" style="transition-delay: 0.5s">
+                    <div class="workflow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div class="step-number">05</div>
+                    <h3 class="step-title" data-i18n="wf_s5_title">Export & Envoi</h3>
+                    <p class="step-desc" data-i18n="wf_s5_desc">Rapports PDF générés ou export sous forme de fichier Excel. Téléchargez ou envoyez par mail directement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section section-darker">
+        <div class="container">
+            <div class="text-center section-header">
+                <h2 class="section-title"><span data-i18n="pr_title">Des tarifs </span><span class="text-gradient" data-i18n="pr_title_hl">transparents.</span></h2>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card glass-panel reveal-up">
+                    <div class="pricing-tier" data-i18n="pr_tier_starter">Starter</div>
+                    <div class="pricing-price">79€<span class="pricing-period" data-i18n="pr_period">HT/mois</span></div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pr_s1_l1">Jusqu'à 400 documents traités/mois</li>
+                        <li data-i18n="pr_s1_l2">Extraction documentaire par IA</li>
+                        <li data-i18n="pr_s1_l3">Support email</li>
+                    </ul>
+                    <a href="essai.html" class="btn btn-primary" data-i18n="pr_cta_trial">Essaie</a>
+                </div>
+                <!-- Pro -->
+                <div class="pricing-card glass-panel reveal-up border-glow">
+                    <div class="pricing-tier text-gradient" data-i18n="pr_tier_pro">Pro</div>
+                    <div class="badge recommended" data-i18n="pr_recommended">⭐ Recommandé</div>
+                    <div class="pricing-price">149€<span class="pricing-period" data-i18n="pr_period">HT/mois</span></div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pr_s2_l1">Jusqu'à 700 documents traités/mois</li>
+                        <li data-i18n="pr_s2_l2">Extraction documentaire par IA</li>
+                        <li data-i18n="pr_s2_l3">Support prioritaire</li>
+                    </ul>
+                    <a href="essai.html" class="btn btn-primary" data-i18n="pr_cta_trial">Essaie</a>
+                </div>
+
+                <!-- Entreprise -->
+                <div class="pricing-card glass-panel reveal-up bg-subtle">
+                    <div class="pricing-tier" data-i18n="pr_tier_enterprise">Entreprise</div>
+                    <div class="pricing-price pricing-price-quote" data-i18n="pr_s4_price">Sur devis<span class="pricing-period"></span></div>
+                    <ul class="pricing-features">
+                        <li data-i18n="pr_s4_l1">Plus de 1000 documents/mois</li>
+                        <li data-i18n="pr_s4_l2">Extraction documentaire par IA</li>
+                        <li data-i18n="pr_s4_l3">Multi-utilisateurs</li>
+                        <li data-i18n="pr_s4_l4">Support dédié</li>
+                    </ul>
+                    <a href="essai.html" class="btn btn-primary" data-i18n="pr_cta_trial">Essaie</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Meeting -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="text-center section-header reveal-up">
+                <h2 class="section-title"><span data-i18n="ct_title">Prêt à </span><span class="text-gradient" data-i18n="ct_title_hl">accélérer ?</span></h2>
+                <p class="section-desc" data-i18n="ct_desc">Contactez-nous pour organiser une démonstration en direct de DataXtrak, adaptée à vos documents.</p>
+            </div>
+
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div class="contact-form-container glass-panel reveal-up">
+                    <form id="main-contact-form" class="contact-form" action="https://formsubmit.co/harsinghcristella@outlook.com" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="fm_l1">Nom complet</label>
+                            <input type="text" id="name" name="nom" required placeholder="Jean Dupont" data-i18n-placeholder="fm_p1">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="fm_l2">E-mail professionnel</label>
+                            <input type="email" id="email" name="email" required placeholder="jean@entreprise.com" data-i18n-placeholder="fm_p2">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-i18n="fm_l3">Entreprise / Secteur</label>
+                            <input type="text" id="company" name="entreprise" required placeholder="Votre cabinet" data-i18n-placeholder="fm_p3">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="fm_l4">Comment pouvons-nous vous aider ?</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Bonjour, je souhaiterais extraire des données de mes..." data-i18n-placeholder="fm_p4"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nouveau message contact DataXtrak !">
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" class="btn btn-primary btn-submit btn-block" data-i18n="fm_btn">Envoyer la demande</button>
+                        <div id="form-success" class="form-success hidden" data-i18n="fm_succ">Message envoyé avec succès ! Nous vous recontacterons très vite.</div>
+                    </form>
+                </div>
+
+                <div class="direct-contact mt-8 text-center reveal-up">
+                    <p class="text-sm text-dim" data-i18n="ct_lbl1">Ou contactez-nous directement :</p>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 0.75rem;">
+                        <a href="mailto:contact@visionarytech.fr" class="contact-email" style="color: var(--brand-cyan); font-weight: 500; font-size: 1.1rem;">contact@visionarytech.fr</a>
+                        <a href="tel:+33689218301" class="contact-phone" style="color: var(--brand-cyan); font-weight: 500; font-size: 1.1rem;">06 89 21 83 01</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <img src="./assets/logo-visionarytech.png" alt="Logo VisionaryTech" data-i18n-alt="alt_visionary_logo" class="brand-logo footer-logo">
+                        <span class="brand-vt">VisionaryTech</span>
+                    </div>
+                    <p class="footer-desc mt-4 text-dim" data-i18n="ft_desc">L'IA de confiance au service des professionnels. Basé à Montpellier, France.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title" data-i18n="ft_t1">Produit</h4>
+                    <a href="#pricing" data-i18n="ft_l3">Tarifs</a>
+                    <a href="#how-it-works" data-i18n="ft_l1">Fonctionnalités</a>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title" data-i18n="ft_t2">Légal</h4>
+                    <a href="#" data-i18n="ft_l6">CGV / CGU</a>
+                    <a href="#" data-i18n="ft_l5">Mentions légales</a>
+                    <a href="#" data-i18n="ft_l7">Politique de confidentialité</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="ft_bot">&copy; 2026 VisionaryTech. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn" data-i18n-aria-label="aria_linkedin">IN</a>
+                    <a href="#" aria-label="Twitter" data-i18n-aria-label="aria_twitter">X</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./translations.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
