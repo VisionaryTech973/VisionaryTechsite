@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
     revealElements.forEach(el => observer.observe(el));
 
-    // 2.5 Product carousels (autoplay on hover only)
+    // 2.5 Product carousels with click navigation, autoplay, and swipe support
     const productCarousels = document.querySelectorAll('.product-carousel');
     productCarousels.forEach((carousel) => {
         const slides = carousel.querySelectorAll('.product-slide');
@@ -192,8 +192,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let currentIndex = 0;
         let autoplayId = null;
+        let touchStartX = 0;
+        let touchEndX = 0;
         const delay = Number(carousel.getAttribute('data-autoplay-delay')) || 2400;
 
+        // Create navigation buttons
+        const navPrev = document.createElement('button');
+        navPrev.className = 'carousel-nav carousel-nav-prev';
+        navPrev.setAttribute('aria-label', 'Diapo précédente');
+        navPrev.innerHTML = '←';
+        carousel.appendChild(navPrev);
+
+        const navNext = document.createElement('button');
+        navNext.className = 'carousel-nav carousel-nav-next';
+        navNext.setAttribute('aria-label', 'Diapo suivante');
+        navNext.innerHTML = '→';
+        carousel.appendChild(navNext);
+
+        // Create dots
         if (dotsContainer) {
             dotsContainer.innerHTML = '';
             slides.forEach((_, index) => {
@@ -204,14 +220,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 dot.setAttribute('aria-label', `Aller au visuel ${index + 1}`);
                 if (index === 0) dot.classList.add('is-active');
                 dot.addEventListener('click', () => {
-                    stopAutoplay();
                     showSlide(index);
+                    resetAutoplay();
                 });
                 dot.addEventListener('keydown', (event) => {
                     if (event.key === 'Enter' || event.key === ' ') {
                         event.preventDefault();
-                        stopAutoplay();
                         showSlide(index);
+                        resetAutoplay();
                     }
                 });
                 dotsContainer.appendChild(dot);
@@ -234,6 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
             showSlide(next);
         };
 
+        const goToPrevSlide = () => {
+            const prev = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(prev);
+        };
+
         const stopAutoplay = () => {
             if (autoplayId) {
                 clearInterval(autoplayId);
@@ -246,15 +267,50 @@ document.addEventListener('DOMContentLoaded', () => {
             autoplayId = setInterval(goToNextSlide, delay);
         };
 
-        showSlide(0);
-
-        const triggerElement = block || carousel;
-        
-        triggerElement.addEventListener('mouseenter', startAutoplay);
-        triggerElement.addEventListener('mouseleave', () => {
+        const resetAutoplay = () => {
             stopAutoplay();
-            showSlide(0);
+            startAutoplay();
+        };
+
+        // Navigation button events
+        navPrev.addEventListener('click', () => {
+            goToPrevSlide();
+            resetAutoplay();
         });
+
+        navNext.addEventListener('click', () => {
+            goToNextSlide();
+            resetAutoplay();
+        });
+
+        // Swipe support for touch devices
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+
+        const handleSwipe = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - show next slide
+                    goToNextSlide();
+                } else {
+                    // Swipe right - show previous slide
+                    goToPrevSlide();
+                }
+                resetAutoplay();
+            }
+        };
+
+        showSlide(0);
+        startAutoplay();
     });
 
 
