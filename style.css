@@ -1411,61 +1411,57 @@ h4 {
 }
 
 .footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
     margin-bottom: 4rem;
+    align-items: start;
 }
 
-/* Chaque colonne du footer */
-.footer-brand,
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.footer-column {
+    display: grid;
+    grid-template-rows: 32px 24px 24px;
+    row-gap: 1rem;
+    align-items: center;
     text-align: left;
 }
 
-/* Colonne gauche */
-.footer-brand {
-    width: 34%;
+/* Ligne titre : logo / Produit / Légal */
+.footer-title {
+    height: 32px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-primary);
 }
 
-.footer-brand .brand {
-    justify-content: flex-start;
-    min-height: 32px;
+.footer-brand-title {
+    gap: 0;
+    color: var(--text-secondary);
 }
 
 .footer-logo {
     height: 32px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transform: none;
 }
 
-.footer-desc {
-    max-width: 340px;
-    line-height: 1.6;
-    margin-top: 1.5rem;
-}
-
-/* Colonnes Produit / Légal */
-.footer-links {
-    width: 22%;
-    padding-top: 4px;
-    gap: 0.85rem;
-}
-
-.footer-title {
-    font-size: 1.1rem;
-    line-height: 32px;
-    margin-bottom: 0.75rem;
-}
-
-.footer-links a {
+/* Lignes items : Basé / Tarifs / CGV, puis IA / Fonctionnalités / Politique */
+.footer-item {
+    height: 24px;
+    display: flex;
+    align-items: center;
     color: var(--text-secondary);
     font-size: 0.9rem;
+    line-height: 1;
 }
 
-.footer-links a:hover {
+.footer-item:hover {
     color: var(--text-primary);
 }
 
@@ -1474,7 +1470,6 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding-top: 2rem;
     color: var(--text-dim);
@@ -1490,34 +1485,23 @@ h4 {
     }
 
     .footer-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
         margin-bottom: 3rem;
     }
 
-    .footer-brand,
-    .footer-links {
-        width: 100%;
-        align-items: center;
+    .footer-column {
+        grid-template-rows: auto auto auto;
+        row-gap: 0.85rem;
+        justify-items: center;
         text-align: center;
     }
 
-    .footer-brand .brand {
+    .footer-title,
+    .footer-item {
         justify-content: center;
-    }
-
-    .footer-desc {
-        max-width: 100%;
-        margin-top: 1rem;
-    }
-
-    .footer-links {
-        padding-top: 0;
-    }
-
-    .footer-title {
-        line-height: 1.2;
+        height: auto;
+        line-height: 1.3;
     }
 
     .footer-bottom {
@@ -1525,7 +1509,6 @@ h4 {
         gap: 1rem;
     }
 }
-
 
 .contact-email {
     font-size: 1.25rem;
@@ -1700,7 +1683,7 @@ h4 {
         line-height: 1.5;
     }
 
-    /* 5. Center Footer Content */
+    /* 5. Center Footer Content
     .footer {
         text-align: center;
     }
@@ -1716,5 +1699,5 @@ h4 {
         flex-direction: column;
         gap: 1.5rem;
         justify-content: center;
-    }
+    } */
 }
