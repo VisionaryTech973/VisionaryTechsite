@@ -161,6 +161,8 @@ const translations = {
         trial_success_close: "Fermer",
         
         ft_desc: "L'IA de confiance au service des professionnels. Basé à Montpellier, France.",
+        ft_based_europe: "Basé en Europe",
+        ft_ai_solutions: "L'IA au service des professionnels",
         ft_t1: "Produit",
         ft_l1: "Fonctionnalités",
         ft_l2: "Secteurs",
@@ -334,6 +336,8 @@ const translations = {
         trial_success_close: "Close",
         
         ft_desc: "Trusted AI serving professionals. Based in Montpellier, France.",
+        ft_based_europe: "Based in Europe",
+        ft_ai_solutions: "AI Solutions for Professionals",
         ft_t1: "Product",
         ft_l1: "Features",
         ft_l2: "Sectors",
